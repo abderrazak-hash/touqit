@@ -18,11 +18,10 @@ class LoginController extends GetxController {
   var loginLoading = false.obs;
 
   onLoginClick() {
-    // validate name
-    // if (!userName.value.isNotEmpty) {
-    //   OverlayHelper.showErrorToast(AppText.invalidUserName);
-    //   return;
-    // }
+    if (!userName.value.isNotEmpty) {
+      OverlayHelper.showErrorToast(AppText.invalidUserName);
+      return;
+    }
     callLoginApi(userName.value, password.value);
   }
 

@@ -216,9 +216,9 @@ class LoginView extends StatelessWidget {
       ));
 
   _onLogin() {
-    // formKey.currentState?.save();
-    // if (formKey.currentState!.validate()) {
+    formKey.currentState?.save();
+    if (formKey.currentState!.validate()) {
     controller.onLoginClick();
-    // }
+    }
   }
 }
